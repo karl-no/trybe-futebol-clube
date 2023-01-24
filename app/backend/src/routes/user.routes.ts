@@ -2,9 +2,9 @@ import { Router } from 'express';
 import { loginValidation, tokenValidation } from '../middlewares/loginValidation';
 import userController from '../controllers/user.controller';
 
-const router = Router();
+const userRouter = Router();
 
-router.post('/', loginValidation, userController.getUserByEmail);
-router.get('/validate', tokenValidation, userController.getUserRole);
+userRouter.post('/', loginValidation, userController.getUserByEmail);
+userRouter.get('/validate', tokenValidation, userController.getUserRole);
 
-export default router;
+export default userRouter;
