@@ -11,8 +11,22 @@ export default class MatchController {
     res.status(HTTPCodes.ok).json(matches);
   };
 
-  public createMatch = async (_req: Request, res: Response) => {
-    const matches = {};
-    return res.status(HTTPCodes.ok).json(matches);
+  public finishMatch = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    await this.matchesService.finishMatch(Number(id));
+    return res.status(HTTPCodes.ok).json({ message: 'Finished' });
+  };
+
+  public updateMatch = async (req: Request, res: Response) => {
+    const { id } = req.params;
+    const match = req.body;
+    await this.matchesService.updateMatch(Number(id), match);
+    return res.status(HTTPCodes.ok).json({ message: 'Updated' });
+  };
+
+  public saveMatch = async (req: Request, res: Response) => {
+    const credentials = req.body;
+    const newMatch = await this.matchesService.saveMatch(credentials);
+    return res.status(HTTPCodes.created).json(newMatch);
   };
 }

@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt = require('jsonwebtoken');
+import HTTPCodes from '../utils/HTTPCodes';
 
 const secret = process.env.JWT_SECRET;
 
@@ -11,7 +12,7 @@ const loginValidation = (
   const { email, password } = req.body;
 
   if (!email || !password) {
-    return res.status(400).json({ message: 'All fields must be filled' });
+    return res.status(HTTPCodes.badRequest).json({ message: 'All fields must be filled' });
   }
   next();
 };
@@ -23,14 +24,16 @@ const tokenValidation = (
 ) => {
   const { authorization: token } = req.headers;
   if (!token) {
-    return res.status(401).json({ message: 'Token not found' });
+    return res.status(HTTPCodes.authenticationError).json({ message: 'Token not found' });
   }
   try {
     const user = jwt.verify(token, secret as string);
     req.body.user = user;
     next();
   } catch (error) {
-    return res.status(400).json({ message: 'Expired or invalid token' });
+    return res.status(HTTPCodes.authenticationError)
+      .json({ message: 'Token must be a valid token' });
+    // return res.status(HTTPCodes.badRequest).json({ message: 'Expired or invalid token' });
   }
 };
 

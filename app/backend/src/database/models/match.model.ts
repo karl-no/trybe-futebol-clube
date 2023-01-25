@@ -18,23 +18,18 @@ Match.init({
   },
   homeTeamId: {
     type: INTEGER,
-    allowNull: false,
   },
   homeTeamGoals: {
     type: INTEGER,
-    allowNull: false,
   },
   awayTeamId: {
     type: INTEGER,
-    allowNull: false,
   },
   awayTeamGoals: {
     type: INTEGER,
-    allowNull: false,
   },
   inProgress: {
     type: BOOLEAN,
-    allowNull: false,
   },
 }, {
   underscored: true,
