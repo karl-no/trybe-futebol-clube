@@ -1,5 +1,5 @@
 import userModel from '../database/models/user.model';
-import { iUser } from '../interfaces/iUser';
+import iUser from '../interfaces/iUser';
 
 const getUserByEmail = async (email: string): Promise<iUser> => {
   const user = await userModel.findOne({ where: { email } });
