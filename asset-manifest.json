@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/trybe-futebol-clube/static/css/main.91f4a030.chunk.css",
+    "main.js": "/trybe-futebol-clube/static/js/main.2700d115.chunk.js",
+    "main.js.map": "/trybe-futebol-clube/static/js/main.2700d115.chunk.js.map",
+    "runtime-main.js": "/trybe-futebol-clube/static/js/runtime-main.11e56c54.js",
+    "runtime-main.js.map": "/trybe-futebol-clube/static/js/runtime-main.11e56c54.js.map",
+    "static/js/2.5fd78033.chunk.js": "/trybe-futebol-clube/static/js/2.5fd78033.chunk.js",
+    "static/js/2.5fd78033.chunk.js.map": "/trybe-futebol-clube/static/js/2.5fd78033.chunk.js.map",
+    "index.html": "/trybe-futebol-clube/index.html",
+    "static/css/main.91f4a030.chunk.css.map": "/trybe-futebol-clube/static/css/main.91f4a030.chunk.css.map",
+    "static/js/2.5fd78033.chunk.js.LICENSE.txt": "/trybe-futebol-clube/static/js/2.5fd78033.chunk.js.LICENSE.txt",
+    "static/media/negative_logo.29805c2a.png": "/trybe-futebol-clube/static/media/negative_logo.29805c2a.png",
+    "static/media/positive_logo.4a6f1733.png": "/trybe-futebol-clube/static/media/positive_logo.4a6f1733.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.11e56c54.js",
+    "static/js/2.5fd78033.chunk.js",
+    "static/css/main.91f4a030.chunk.css",
+    "static/js/main.2700d115.chunk.js"
+  ]
+}
